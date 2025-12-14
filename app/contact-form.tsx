@@ -26,8 +26,6 @@ export default function ContactForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message'),
         recaptchaToken: token,
       }),
     })
@@ -47,19 +45,6 @@ export default function ContactForm() {
         placeholder="Name"
         required
         className="border p-2 rounded"
-      />
-      <input
-        name="email"
-        type="email"
-        placeholder="Email"
-        required
-        className="border p-2 rounded"
-      />
-      <textarea
-        name="message"
-        placeholder="Message"
-        required
-        className="border p-2 rounded min-h-[100px]"
       />
       <button
         type="submit"
